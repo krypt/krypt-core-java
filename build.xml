@@ -10,8 +10,8 @@
   <property name="lib.dir" value="lib/"/>
   <property name="test.results.dir" value="${target}/test-results"/>
   <property name="jruby.jar" value="${jruby.home}/lib/jruby.jar"/>
-  <property name="version.source" value="1.5"/>
-  <property name="version.target" value="1.5"/>
+  <property name="version.source" value="1.6"/>
+  <property name="version.target" value="1.6"/>
   <property name="platform.javac" value="${java.home}/bin/javac"/>
   
   <echo message="${platform.javac}"/>
