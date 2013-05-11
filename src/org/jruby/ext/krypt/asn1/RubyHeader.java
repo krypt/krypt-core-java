@@ -101,7 +101,7 @@ public class RubyHeader extends RubyObject {
             case PRIVATE:
                 return RubySymbol.newSymbol(runtime, TagClass.PRIVATE.name());
             default:
-                throw runtime.newRuntimeError("Unkown TagClass " + tc);
+                throw runtime.newRuntimeError("Unknown TagClass " + tc);
         }
     }
     
