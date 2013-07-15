@@ -107,9 +107,7 @@ public class RubyNativeProvider extends RubyObject {
             return null;
         
         IRubyObject[] ret = new IRubyObject[args.length - 1];
-        for (int i=1; i < args.length; i++) {
-            ret[i - 1] = args[i];
-        }
+        System.arraycopy(args, 1, ret, 0, args.length - 1);
         return ret;
     }
 }
