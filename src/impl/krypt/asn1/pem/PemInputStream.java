@@ -274,8 +274,6 @@ public class PemInputStream extends FilterInputStream {
     }
     
     public static class MalformedPemException extends RuntimeException {
-        public MalformedPemException(Throwable cause) { super(cause); }
-        public MalformedPemException(String message, Throwable cause) { super(message, cause); }
         public MalformedPemException(String message) { super(message); }
     }
 }
