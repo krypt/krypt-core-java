@@ -36,7 +36,7 @@ import java.io.OutputStream;
  */
 public class Asn1Object {
     
-    private Header header;
+    private final Header header;
     private byte[] value;
 
     public Asn1Object(Header header, byte[] value) {
