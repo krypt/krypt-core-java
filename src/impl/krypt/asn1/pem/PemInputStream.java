@@ -45,7 +45,7 @@ import org.jruby.ext.krypt.Base64;
  */
 public class PemInputStream extends FilterInputStream {
 
-    private Base64Buffer b64Buffer;
+    private final Base64Buffer b64Buffer;
     private final byte[] singleByte = new byte[1];
     
     public PemInputStream(InputStream in) {
@@ -103,9 +103,7 @@ public class PemInputStream extends FilterInputStream {
             Matcher m = pattern.matcher(line);
             if (m.matches()) {
                 name = m.group(1);
-                if (name == null)
-                    return false;
-                return true;
+                return name != null;
             }
             return false;
         }
@@ -132,10 +130,7 @@ public class PemInputStream extends FilterInputStream {
         @Override
         public boolean match() throws IOException {
             boolean match = super.match();
-            if (match && name.equals(getName()))
-                return true;
-            else
-                return false;
+            return match && name.equals(getName());
         }
     }
     
