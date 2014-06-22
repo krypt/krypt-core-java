@@ -1,9 +1,11 @@
-version = '0.0.2.rc1'
+$:.unshift File.expand_path('../lib', __FILE__)
+
+require 'krypt/core/version'
 
 Gem::Specification.new do |s|
 
   s.name = 'krypt-core'
-  s.version = version
+  s.version = Krypt::Core::VERSION
   
   s.author = 'Hiroshi Nakamura, Martin Bosslet'
   s.email = 'Martin.Bosslet@gmail.com'
@@ -17,6 +19,6 @@ Gem::Specification.new do |s|
   s.license = 'MIT'
 
   s.platform = 'universal-java'
-  s.add_dependency 'krypt-provider-jdk', version
+  s.add_dependency 'krypt-provider-jdk', Krypt::Core::VERSION
 
 end
